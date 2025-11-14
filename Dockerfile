@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir uv docling-mcp
 EXPOSE 8001
 
 # Starta docling-mcp-server med HTTP-transport
-CMD ["uvx", "--python", "3.11", "--from", "docling-mcp", "docling-mcp-server", "--transport", "streamable-http", "--host", "0.0.0.0", "--port", "8001"]
+CMD ["sh", "-c", "uvx --python 3.11 --from docling-mcp docling-mcp-server --transport streamable-http --host 0.0.0.0 --port $PORT"]
